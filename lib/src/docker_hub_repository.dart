@@ -27,7 +27,7 @@ class DockerRepository {
 
   /// Repository Full Path
   String _repoPath(String _name) {
-    return _base_url + user + '/' + _name + '?page=' + pageCount.toString();
+    return '${_base_url}${user}/${_name}?page=' + pageCount.toString();
   }
 
   /// Handle Request Success
@@ -54,7 +54,7 @@ class DockerRepository {
 
   /// Return All Images
   Future<List<DockerImage>> images({int page = 1}) async {
-    await httpGet("${_base_url}${user}");
+    await httpGet('${_base_url}${user}');
     imageCount = _getJson()['count'];
     var images = <DockerImage>[];
     final data = _getJson()['results'];
