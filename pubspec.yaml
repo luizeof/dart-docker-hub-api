@@ -1,5 +1,5 @@
 name: docker_hub_api
-description: The Docker Registry HTTP API interacts with instances of the docker registry, which is a service to manage information about docker images and enable their distribution.
+description: The Docker Registry HTTP API interacts with instances of the docker registry, which is a service to manage information about docker images.
 version: 1.0.3
 homepage: https://github.com/luizeof/dart-docker-hub-api
 
