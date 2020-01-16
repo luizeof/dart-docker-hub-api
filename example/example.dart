@@ -1,10 +1,3 @@
-# DockerHub API
-
-Docker Hub API for Dart and Flutter
-
-## Usage
-
-```dart
 import 'package:docker_hub_api/docker_hub_api.dart';
 
 void main() async {
@@ -33,5 +26,3 @@ void main() async {
   print(repo.imageCount);
   print(repo.pageCount);
 }
-
-```
