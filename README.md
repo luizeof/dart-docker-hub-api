@@ -1,6 +1,8 @@
 # DockerHub API
 
-Docker Hub API for Dart and Flutter
+The Docker Registry HTTP API is the protocol to facilitate distribution of images to the docker engine.
+
+It interacts with instances of the docker registry, which is a service to manage information about docker images and enable their distribution.
 
 ## Usage
 
