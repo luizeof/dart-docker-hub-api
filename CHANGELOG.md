@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8
+
+- Docker Image to Json
+
 ## 1.0.7
 
 - Fixes
