@@ -1,11 +1,11 @@
 import 'package:docker_hub_api/docker_hub_api.dart';
 
 void main() async {
-  var repo = DockerRepository('nginx');
+  var repo = DockerRepository('luizeof');
 
-  var images = await repo.images(page: 1);
+  // var images = await repo.images(page: 1);
 
-  var image = images.first;
+  var image = await repo.getImage("nginx-proxy");
 
   print(image.user);
   print(image.name);
@@ -23,6 +23,4 @@ void main() async {
   print(image.has_starred);
   print(image.full_description);
   print(image.affiliation);
-  print(repo.imageCount);
-  print(repo.pageCount);
 }
