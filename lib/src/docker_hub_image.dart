@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 /// Docker Image
 class DockerImage {
   ///
@@ -59,6 +61,44 @@ class DockerImage {
         full_description: json['full_description'].toString(),
         affiliation: json['affiliation'].toString(),
         raw: json.toString());
+  }
+
+  /// Return Docker Image as Map
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'user': user.toString(),
+      'name': name.toString(),
+      'namespace': namespace.toString(),
+      'repository_type': repository_type.toString(),
+      'status': status,
+      'description': description.toString(),
+      'is_private': is_private,
+      'is_automated': is_automated,
+      'can_edit': can_edit,
+      'star_count': star_count,
+      'pull_count': pull_count,
+      'last_updated': last_updated.toIso8601String(),
+      'is_migrated': is_migrated,
+      'has_starred': has_starred,
+      'full_description': full_description.toString(),
+      'affiliation': affiliation.toString(),
+    };
+  }
+
+  /// Return Docker Image as Json String
+  String toJsonString() {
+    return jsonEncode(
+      toMap(),
+    );
+  }
+
+  /// Return Docker Image as Json
+  dynamic toJson() {
+    return jsonDecode(
+      jsonEncode(
+        toMap(),
+      ),
+    );
   }
 
   /// Repository Public URL
