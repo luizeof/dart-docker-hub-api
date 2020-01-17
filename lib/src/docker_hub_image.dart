@@ -61,4 +61,7 @@ class DockerImage {
 
   /// Repository Public URL
   String get publicUrl => 'https://hub.docker.com/r/${user}/${name}/';
+
+  /// Repository Image Key
+  String get imageKey => '${user}/${name}'.replaceAll('/', '__');
 }

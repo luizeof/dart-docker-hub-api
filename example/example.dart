@@ -23,4 +23,5 @@ void main() async {
   print(image.has_starred);
   print(image.full_description);
   print(image.affiliation);
+  print(image.imageKey);
 }
