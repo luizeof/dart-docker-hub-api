@@ -69,11 +69,21 @@ class DockerRepository {
     return images;
   }
 
-  /// Return All Images
+  /// Return Image Images
   Future<DockerImage> getImage(String _name) async {
     await httpGet('${_base_url}${user}/${_name}');
     try {
       return DockerImage.fromJson(_getJson());
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Update Docker Image Data
+  Future<DockerImage> updateImage(DockerImage _image) async {
+    await httpGet(_image.apiUrl);
+    try {
+      return new DockerImage.fromJson(_getJson());
     } catch (e) {
       return null;
     }
