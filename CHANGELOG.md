@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Fix Images Pagination
+
 ## 1.0.2
 
 - Dart Analyzer
