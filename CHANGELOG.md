@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.0.5
+
+- Get Image
+
 ## 1.0.4
 
-- Fixes PAgination
+- Fixes Pagination
 
 ## 1.0.3
 
