@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7
+
+- Fixes
+
 ## 1.0.6
 
 - Fixes
